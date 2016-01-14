@@ -1,5 +1,11 @@
 module.exports.hello = function (req, res) {
-	res.render('index',{titulo:"Hello World!"});
+	req.session.i = req.session.i  || 1;
+	req.session.ultimaVisita = new Date();
+	res.render('index', {
+		titulo:"Hello World!",
+		contador: req.session.i++,
+		acesso: req.session.ultimaVisita
+	});
 };
 
 module.exports.bye = function (req, res) {
