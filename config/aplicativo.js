@@ -27,6 +27,7 @@ module.exports = function(){
 	app.use(express.static('./public'));
 	app.set('views', 'app/views');
 	app.set('view engine', 'ejs');
+	require('../app/routes/users.server.routes')(app);
 	require('../app/routes/index.server.routes')(app);
 	return app;
 };

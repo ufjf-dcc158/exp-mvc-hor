@@ -1,3 +1,4 @@
 module.exports = {
-	sessionSecret : "foobar"	
+	sessionSecret : "foobar",
+	db: "mongodb://localhost/mean"	
 }
